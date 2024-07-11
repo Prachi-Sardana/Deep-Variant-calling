@@ -1,0 +1,73 @@
+---
+title: "MethodsVariantCalling.Rmd"
+author: "Prachi Sardana"
+date: "2023-02-24"
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    dev: 'svg'
+    md_document:
+    variant: gfm
+bibliography: bibliography.ris
+---
+
+*METHODS*
+
+**Variant calling**
+
+A method to identify variants from sequence data.
+
+The method of variant calling involves:
+1. Retrieving the reference genome from Gencode FTP Server (human, release27) using shell script getGenome.sh
+2. Retrieving the NGS reads used available in SRA under accession SRR6808334.(shell script get Reads.sh)
+3.Quality trimming the reads using Trimmomatic(trimreads.sh)
+4.Indexing the genome for use by BWA (indexGenome.sh)
+5.Aligning the reads using bwa mem (alignReads.sh)
+6.Sorting the file created by bwa mem to a sorted bam (sort.sh)
+7.Indexing reads (indexReads.sh)
+8.Producing a VCF file using DeepVariant (runDeepVariant.sh)
+
+
+1. *getGenome.sh*
+
+In getgenome.sh script, used wget command to download the GRCh38 reference genome from the EMBL-EBI FTP server. The downloaded file was saved to GRCh38_reference.fa.gz The standard error and log files were redirected.
+
+2. *getReads.sh*
+
+The NGS reads were retrieved from the NA12878 reference sample using fastq dump command. In order to extract the data from Sequence Read archive accession number SRR6808334 the fastq dump command was used. The file was split into paired end reads to separate files. The standard error and log files were redirected.
+
+
+3. *trimReads.sh*
+
+After obtaining NGS reads from NA12878 reference sample, the reads were quality trimmed using Trimmomatic 0.36 tool. The tool is a JAVA based quality trimmer that trims the quality reads and is responsible for adaptor clipping.The quality trimming was performed specifically through quality phred scores.The paired input and output files were provided.The headcrop removed the first 0 bases from the start of each read.The illumina clip removed the specific adapter sequences from the reads.The leading and trailing basses with quality score less than 20 were removed from the beginning and end of the reads.The 4 bases sliding window were used to scan the reads and the bases with quality scores lower than 30 within the window were removed. The reads shorter than 36 bases after trimming were discared.
+
+4. *indexGenome.sh*
+
+ BWA (Burrows-Wheeler Alignment Tool) was used to map the low divergent sequences against a reference genome.The bwa tool used 3 algorithms BWA-backtrack, BWA-SW and BWA-MEM.It first construct an FM-index for the reference genome.
+The input file i.e the reference genome GRCH38_reference.fa was indexed using the BWA tool. The log and error files were redirected.
+
+5. *alignReads.sh*
+
+The bwa- mem performed alignment of the reads GRCh38 reference genome using BWA algorithm.The BWA used 8 threads for alignment.The paired end reads containing input files SRR6808334_1.fastq SRR6808334_2.fastq  were aligned to the reference genome GRCh38_reference.fa. The standard output file sam and error were redirected to SAM files and error files respectively.
+
+6. *sort.sh*
+
+Samtools were used to sort the output SAM file (SRR6808334.sam) and convert it to BAM format.Based on genomic coordinates, the input SAM file was sorted and produced a sorted BAM file.Samtools used 8 threads for sorting and maximum memory of 4GB was specified. The output files were redirected to sorted BAM file.The log and error files were redirected.
+
+7. *indexReads.sh*
+
+Further, the samtools created an index file for the input BAM file allowing faster access to access to specific regions of genome during downstream analysis.The log error and log files were redirected.
+
+8. *runDeepVariant.sh*
+
+Finally a deep variant,an analysis pipeline was processed that used a deep neural network to call genetic variants from next-generation DNA sequencing data.
+The deep variant was runned on a Bam file consisting of aligned reads and reference genome.The paths were specified for the input data (Bam file and the reference genome). The docker installation was necessary as it produced a computational reproducible and cleaner way by running every step inside of a Docker container.
+The Deepvariant built images on the BAm file and then used deep learning image recognition approach to obtain variants and eventually converted the output of the prediction in the standard VCF format.
+
+**References**
+
+
+
+

@@ -1,0 +1,84 @@
+TY  - JOUR
+DB  - PubMed
+AU  - Yao, Zhen
+AU  - You, Frank M
+AU  - N'Diaye, Amidou
+AU  - Knox, Ron E
+AU  - McCartney, Curt
+AU  - Hiebert, Colin W
+AU  - Pozniak, Curtis
+AU  - Xu, Wayne
+T1  - Evaluation of variant calling tools for large plant genome re-sequencing
+LA  - eng
+SN  - 1471-2105
+Y1  - 2020/08/17
+AB  - BACKGROUND: Discovering single nucleotide polymorphisms (SNPs) from agriculture crop genome sequences has been a widely used strategy for developing genetic markers for several applications including marker-assisted breeding, population diversity studies for eco-geographical adaption, genotyping crop germplasm collections, and others. Accurately detecting SNPs from large polyploid crop genomes such as wheat is crucial and challenging. A few variant calling methods have been previously developed but they show a low concordance between their variant calls. A gold standard of variant sets generated from one human individual sample was established for variant calling tool evaluations, however hitherto no gold standard of crop variant set is available for wheat use. The intent of this study was to evaluate seven SNP variant calling tools (FreeBayes, GATK, Platypus, Samtools/mpileup, SNVer, VarScan, VarDict) with the two most popular mapping tools (BWA-mem and Bowtie2) on wheat whole exome capture (WEC) re-sequencing data from allohexaploid wheat. RESULTS: We found the BWA-mem mapping tool had both a higher mapping rate and a higher accuracy rate than Bowtie2. With the same mapping quality (MQ) cutoff, BWA-mem detected more variant bases in mapping reads than Bowtie2. The reads preprocessed with quality trimming or duplicate removal did not significantly affect the final mapping performance in terms of mapped reads. Based on the concordance and receiver operating characteristic (ROC), the Samtools/mpileup variant calling tool with BWA-mem mapping of raw sequence reads outperformed other tests followed by FreeBayes and GATK in terms of specificity and sensitivity. VarDict and VarScan were the poorest performing variant calling tools with the wheat WEC sequence data. CONCLUSION: The BWA-mem and Samtools/mpileup pipeline, with no need to preprocess the raw read data before mapping onto the reference genome, was ascertained the optimum for SNP calling for the complex wheat genome re-sequencing. These results also provide useful guidelines for reliable variant identification from deep sequencing of other large polyploid crop genomes.
+SP  - 360
+EP  - 360
+VL  - 21
+IS  - 1
+AN  - 32807073
+UR  - https://pubmed.ncbi.nlm.nih.gov/32807073
+DO  - 10.1186/s12859-020-03704-1
+L2  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7430858/
+U1  - 32807073[pmid]
+U2  - PMC7430858[pmcid]
+U4  - 10.1186/s12859-020-03704-1[PII]
+J2  - BMC Bioinformatics
+JF  - BMC bioinformatics
+KW  - Sequence mapping tools
+KW  - Tool evaluation
+KW  - Variant calling
+KW  - Variant calling tools
+KW  - Wheat exome capture sequences
+KW  - Area Under Curve
+KW  - *Genome, Plant
+KW  - Humans
+KW  - Polymorphism, Single Nucleotide
+KW  - Polyploidy
+KW  - Principal Component Analysis
+KW  - ROC Curve
+KW  - Software
+KW  - Triticum/*genetics
+KW  - Whole Genome Sequencing/*methods
+CY  - England
+ER  - 
+TY  - JOUR
+DB  - PubMed
+AU  - Alharbi, Wardah S
+AU  - Rashid, Mamoon
+T1  - A review of deep learning applications in human genomics using next-generation sequencing data
+LA  - eng
+SN  - 1479-7364
+SN  - 1473-9542
+Y1  - 2022/07/25
+AB  - Genomics is advancing towards data-driven science. Through the advent of high-throughput data generating technologies in human genomics, we are overwhelmed with the heap of genomic data. To extract knowledge and pattern out of this genomic data, artificial intelligence especially deep learning methods has been instrumental. In the current review, we address development and application of deep learning methods/models in different subarea of human genomics. We assessed over- and under-charted area of genomics by deep learning techniques. Deep learning algorithms underlying the genomic tools have been discussed briefly in later part of this review. Finally, we discussed briefly about the late application of deep learning tools in genomic. Conclusively, this review is timely for biotechnology or genomic scientists in order to guide them why, when and how to use deep learning methods to analyse human genomic data.
+SP  - 26
+EP  - 26
+VL  - 16
+IS  - 1
+AN  - 35879805
+UR  - https://pubmed.ncbi.nlm.nih.gov/35879805
+DO  - 10.1186/s40246-022-00396-x
+L2  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9317091/
+U1  - 35879805[pmid]
+U2  - PMC9317091[pmcid]
+U4  - 10.1186/s40246-022-00396-x[PII]
+J2  - Hum Genomics
+JF  - Human genomics
+KW  - Deep learning applications
+KW  - Disease variants
+KW  - Epigenomics
+KW  - Gene expression
+KW  - Human genomics
+KW  - NGS
+KW  - Pharmacogenomics
+KW  - Variant calling
+KW  - Artificial Intelligence
+KW  - *Deep Learning
+KW  - Genome, Human/genetics
+KW  - Genomics/methods
+KW  - High-Throughput Nucleotide Sequencing
+KW  - Humans
+CY  - England
+ER  - 

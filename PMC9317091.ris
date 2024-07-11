@@ -1,0 +1,39 @@
+TY  - JOUR
+DB  - PubMed
+AU  - Alharbi, Wardah S
+AU  - Rashid, Mamoon
+T1  - A review of deep learning applications in human genomics using next-generation sequencing data
+LA  - eng
+SN  - 1479-7364
+SN  - 1473-9542
+Y1  - 2022/07/25
+AB  - Genomics is advancing towards data-driven science. Through the advent of high-throughput data generating technologies in human genomics, we are overwhelmed with the heap of genomic data. To extract knowledge and pattern out of this genomic data, artificial intelligence especially deep learning methods has been instrumental. In the current review, we address development and application of deep learning methods/models in different subarea of human genomics. We assessed over- and under-charted area of genomics by deep learning techniques. Deep learning algorithms underlying the genomic tools have been discussed briefly in later part of this review. Finally, we discussed briefly about the late application of deep learning tools in genomic. Conclusively, this review is timely for biotechnology or genomic scientists in order to guide them why, when and how to use deep learning methods to analyse human genomic data.
+SP  - 26
+EP  - 26
+VL  - 16
+IS  - 1
+AN  - 35879805
+UR  - https://pubmed.ncbi.nlm.nih.gov/35879805
+DO  - 10.1186/s40246-022-00396-x
+L2  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9317091/
+U1  - 35879805[pmid]
+U2  - PMC9317091[pmcid]
+U4  - 10.1186/s40246-022-00396-x[PII]
+J2  - Hum Genomics
+JF  - Human genomics
+KW  - Deep learning applications
+KW  - Disease variants
+KW  - Epigenomics
+KW  - Gene expression
+KW  - Human genomics
+KW  - NGS
+KW  - Pharmacogenomics
+KW  - Variant calling
+KW  - Artificial Intelligence
+KW  - *Deep Learning
+KW  - Genome, Human/genetics
+KW  - Genomics/methods
+KW  - High-Throughput Nucleotide Sequencing
+KW  - Humans
+CY  - England
+ER  - 
